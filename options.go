@@ -76,6 +76,6 @@ func LenLessThan(num int) Option {
 
 func LenGreaterThan(num int) Option {
 	return func(v reflect.Value) (string, bool) {
-		return "Field \"%s\" must be greater than " + fmt.Sprint(num), v.Len() < num
+		return "Field \"%s\" must be greater than " + fmt.Sprint(num), v.Len() > num
 	}
 }
